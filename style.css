@@ -1,0 +1,11 @@
+div {
+  outline: 1px solid black;
+}
+
+.container {
+  display: flex;
+}
+
+.mainGrids {
+  height: 5px;
+}
