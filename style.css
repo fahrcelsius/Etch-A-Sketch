@@ -31,3 +31,5 @@ div {
   flex-wrap: wrap;
   outline: 1px solid black;
 }
+
+/* i still don't know how to put variables from js to css. If i do, the flexible resize in the grid will be done. */
