@@ -1,6 +1,9 @@
 const container = document.querySelector(".container");
 
-for (let i = 1; i < 256; i++) {
+let gridInput = 32;
+let gridResult = gridInput ** 2;
+
+for (let i = 1; i <= gridResult; i++) {
   let mainGrids = document.createElement("div");
   container.appendChild(mainGrids);
   mainGrids.classList.add("mainGrids");
