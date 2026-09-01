@@ -1,11 +1,33 @@
+:root {
+  --containerHeight: 500px;
+  --containerWidth: 500px;
+  --gridInput: {girdInput};
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 div {
   outline: 1px solid black;
 }
 
 .container {
   display: flex;
+  height: var(--containerHeight);
+  width: var(--containerWidth);
+  flex-wrap: wrap;
 }
 
 .mainGrids {
-  height: 5px;
+  /* height: 100%; */
+  /* flex: 1; */
+  width: calc(var(--containerWidth) / 32);
+  height: calc(var(--containerHeight) / 32);
+  flex-wrap: wrap;
+  outline: 1px solid black;
 }
