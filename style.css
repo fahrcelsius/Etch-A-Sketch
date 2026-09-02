@@ -13,7 +13,7 @@ body {
   height: var(--containerHeight);
   width: var(--containerWidth);
   flex-wrap: wrap;
-  outline: 1px solid black;
+  outline: 5px solid black;
 }
 
 .mainGrids {

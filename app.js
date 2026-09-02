@@ -1,10 +1,10 @@
 const container = document.querySelector(".container");
 
-let gridInput = 16;
+let gridInput = 15;
 let gridResult = gridInput ** 2;
 
-let containerHeight = 500;
-let containerWidth = 500;
+let containerHeight = 600;
+let containerWidth = 600;
 
 let root = document.querySelector(":root");
 root.style.setProperty("--containerHeight", `${containerHeight}px`);
@@ -13,8 +13,12 @@ root.style.setProperty("--containerWidth", `${containerWidth}px`);
 function number(number) {
   gridInput = number;
   gridResult = gridInput ** 2;
+  calcWidth = containerWidth / gridInput;
+  calcHeight = containerHeight / gridInput;
   gridSize();
 }
+
+// change the button into input feature instead to give flexibility
 
 let buttonEight = document.querySelector(".eight");
 let buttonSixteen = document.querySelector(".sixteen");
