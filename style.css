@@ -1,19 +1,11 @@
-:root {
-  --containerHeight: 500px;
-  --containerWidth: 500px;
-  --gridInput: {girdInput};
-}
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-}
-
-div {
-  outline: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -21,15 +13,14 @@ div {
   height: var(--containerHeight);
   width: var(--containerWidth);
   flex-wrap: wrap;
+  outline: 1px solid black;
 }
 
 .mainGrids {
-  /* height: 100%; */
-  /* flex: 1; */
-  width: calc(var(--containerWidth) / 32);
-  height: calc(var(--containerHeight) / 32);
   flex-wrap: wrap;
   outline: 1px solid black;
 }
 
-/* i still don't know how to put variables from js to css. If i do, the flexible resize in the grid will be done. */
+.buttons {
+  margin-top: 10px;
+}
