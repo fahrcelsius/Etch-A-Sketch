@@ -6,6 +6,9 @@ let gridResult = gridInput ** 2;
 let containerHeight = 600;
 let containerWidth = 600;
 
+let calcWidth = containerWidth / gridInput;
+let calcHeight = containerHeight / gridInput;
+
 let root = document.querySelector(":root");
 root.style.setProperty("--containerHeight", `${containerHeight}px`);
 root.style.setProperty("--containerWidth", `${containerWidth}px`);
@@ -39,9 +42,6 @@ function gridAmount() {
   }
 }
 
-let calcWidth = containerWidth / gridInput;
-let calcHeight = containerHeight / gridInput;
-
 function gridSize() {
   gridAmount();
   let mainGrids = document.querySelectorAll(".mainGrids");
@@ -53,3 +53,18 @@ function gridSize() {
 }
 
 gridSize();
+
+let mainGrids = document.querySelectorAll(".mainGrids");
+
+  // mainGrids.addEventListener("mousedown", () => {
+  //   mainGrids.style.backgroundColor = "black";
+  // });
+
+for (let i = 0; i < mainGrids.length; i++) {
+  mainGrids[i].addEventListener("mouseover", () => {
+    mainGrids[i].style.backgroundColor = "black";
+  });
+}
+
+
+
