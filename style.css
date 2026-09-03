@@ -18,7 +18,7 @@ body {
 
 .mainGrids {
   flex-wrap: wrap;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 
 .buttons {
