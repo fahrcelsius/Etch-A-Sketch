@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 
-let gridInput = 15;
+let gridInput = 64;
 let gridResult = gridInput ** 2;
 
 let containerHeight = 600;
@@ -19,6 +19,7 @@ function number(number) {
   calcWidth = containerWidth / gridInput;
   calcHeight = containerHeight / gridInput;
   gridSize();
+  draw();
 }
 
 // change the button into input feature instead to give flexibility
@@ -27,6 +28,7 @@ let buttonEight = document.querySelector(".eight");
 let buttonSixteen = document.querySelector(".sixteen");
 let buttonThirtyTwo = document.querySelector(".thirtyTwo");
 let buttonSixtyFour = document.querySelector(".sixtyFour");
+let isDrawing = false;
 
 buttonEight.addEventListener("click", () => number(8));
 buttonSixteen.addEventListener("click", () => number(16));
@@ -53,18 +55,34 @@ function gridSize() {
 }
 
 gridSize();
+draw();
 
-let mainGrids = document.querySelectorAll(".mainGrids");
+// function draw() {
+//   let mainGrids = document.querySelectorAll(".mainGrids");
+//   for (let i = 0; i < mainGrids.length; i++) {
+//     mainGrids[i].addEventListener("mousemove", () => {
+//       mainGrids[i].style.backgroundColor = "black";
+//     });
+//   }
+// }
 
-  // mainGrids.addEventListener("mousedown", () => {
-  //   mainGrids.style.backgroundColor = "black";
-  // });
 
-for (let i = 0; i < mainGrids.length; i++) {
-  mainGrids[i].addEventListener("mouseover", () => {
-    mainGrids[i].style.backgroundColor = "black";
-  });
+function draw() {
+  let mainGrids = document.querySelectorAll(".mainGrids");
+  for (let i = 0; i < mainGrids.length; i++) {
+    mainGrids[i].addEventListener("mousedown", () => isDrawing = true);
+  }
+
+  for (let i = 0; i < mainGrids.length; i++) {
+    mainGrids[i].addEventListener("mousemove", () => {
+      if (isDrawing) {
+        mainGrids[i].style.backgroundColor = "black";
+      }
+    });
+  }
+
+  for (let i = 0; i < mainGrids.length; i++) {
+    mainGrids[i].addEventListener("mouseup", () => isDrawing = false);
+  }
 }
-
-
 
